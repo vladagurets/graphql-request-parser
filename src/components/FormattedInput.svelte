@@ -1,15 +1,14 @@
 <script>
-  import { sourceQuery } from '../stores.js';
-  import { debounce } from '../utils.js';
+  import { sourceQuery } from '../stores.js'
+  import { debounce } from '../utils.js'
   import { parse, print } from 'graphql'
 
   const IS_LOADING_MESSAGE = 'Loading...'
 
-  let code = ' ';
-  let variables = null;
-
-  let isLoading = false;
-  let error = null;
+  let code = ' '
+  let variables = null
+  let isLoading = false
+  let error = null
 
   const debouncedUpdate = debounce(value => {
     if (value) {
@@ -50,18 +49,16 @@
 
   .content, .message {
     height: 100%;
-    /* padding: 20px; */
   }
 
   .content {
     display: flex;
     flex-direction: column;
   }
-
   .variables {
-    flex: 1;
-    border-top: 1px solid black;
     min-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid var(--main-border-color);
   }
 
   .code, .variables {

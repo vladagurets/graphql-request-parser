@@ -2,6 +2,8 @@
   "name": "graphql-request-parcer",
   "version": "1.0.0",
   "main": "src/index.html",
+  "description": "GraphQL query parcer. Make your client's request readable",
+  "author": "Vladyslav Ohirenko <aguretsvlad@gmail.com",
   "license": "MIT",
   "scripts": {
     "start": "parcel -p 3000 src/index.html",

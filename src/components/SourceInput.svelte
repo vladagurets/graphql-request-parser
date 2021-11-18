@@ -1,5 +1,5 @@
 <script>
-  import { sourceQuery } from '../stores.js';
+  import { sourceQuery } from '../stores.js'
 </script>
 
 <style>
@@ -14,7 +14,7 @@
     width: 100%;
   }
   textarea:focus {
-    border-color: lightskyblue;
+    border-color: var(--outline-focus-color);
   }
 </style>
 
