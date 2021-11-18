@@ -7,11 +7,12 @@
 <style>
 </style>
 
-<div class="content">
+<div class="header">
   <Header/>
-  <section>
-    <SourceInput/>
-    <FormattedInput />
-  </section>
 </div>
-
+<div class="content-source">
+  <SourceInput/>
+</div>
+<div class="content-formatted">
+  <FormattedInput />
+</div>
