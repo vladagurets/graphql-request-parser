@@ -1,34 +1,17 @@
-<p>
-  Hello { name }, the time is <span class="the-time">{ hours }:{ minutes }:{ seconds }</span>
-</p>
+<script>
+ 	import Header from './components/Header.svelte';
+  import SourceInput from './components/SourceInput.svelte';
+  import FormattedInput from './components/FormattedInput.svelte';
+</script>
 
 <style>
-  .the-time {
-    font-weight: bold;
-  }
 </style>
 
-<script>
-  import { onMount } from 'svelte';
+<div class="content">
+  <Header/>
+  <section>
+    <SourceInput/>
+    <FormattedInput />
+  </section>
+</div>
 
-  export let name = 'Anonymous';
-  let time = new Date();
-
-  onMount(() => {
-    const timer = setInterval(() => {
-      time = new Date();
-    }, 1000)
-
-    return () => {
-      clearInterval(timer);
-    }
-  })
-
-  let hours, minutes, seconds;
-
-  $: {
-    hours = time.getHours();
-    minutes = time.getMinutes();
-    seconds = time.getSeconds();
-  }
-</script>
