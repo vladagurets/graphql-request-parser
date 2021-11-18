@@ -1,20 +1,96 @@
 <script>
-  const code = `
-  <pre class="prettyprint lang-js">
-    setTimeout(function(){
-      console.log('deleting cookie');
-    },1000);
-  </pre>
-  `
+  import { sourceQuery } from '../stores.js';
+  import { debounce } from '../utils.js';
+  import { parse, print } from 'graphql'
+
+  const IS_LOADING_MESSAGE = 'Loading...'
+
+  let code = ' ';
+  let variables = null;
+
+  let isLoading = false;
+  let error = null;
+
+  const debouncedUpdate = debounce(value => {
+    if (value) {
+      try {
+        const parsedString = JSON.parse(value.replaceAll('\n', ''))
+
+        code = print(parse(parsedString.query))
+        variables = JSON.stringify(parsedString.variables, null, 2)
+      } catch (e) {
+        error = 'Can\'t parce input :('
+      } finally {
+        isLoading = false
+      }
+    }
+  }, 500)
+
+  sourceQuery.subscribe(value => {
+    if (value) {
+      error = null
+      isLoading = true
+    }
+    debouncedUpdate(value)
+  });
 </script>
 
 <style>
-  div {
+  pre {
+    overflow-y: auto;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    opacity: .8;
+  }
+
+  span {
+    font-size: 20px;
+    opacity: .7;
+  }
+
+  .content, .message {
+    height: 100%;
+    /* padding: 20px; */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .variables {
     flex: 1;
+    border-top: 1px solid black;
+    min-height: 200px;
+  }
+
+  .code, .variables {
+    padding: 20px;
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 
-<div>
-  {@html code}
-</div>
+{#if !isLoading && !error && code}
+  <div class="content">
+    <pre class="code">
+      {@html code}
+    </pre>
+    {#if variables}
+      <pre class="variables">
+        {@html variables}
+      </pre>
+    {/if}
+  </div>
+{:else}
+  <div class="message">
+    <span>{error || IS_LOADING_MESSAGE}</span>
+  </div>
+{/if}
+
+
 

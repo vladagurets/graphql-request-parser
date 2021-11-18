@@ -1,20 +1,22 @@
 <script>
- 
+  import { sourceQuery } from '../stores.js';
 </script>
 
 <style>
   textarea {
-    width: 100%;
-    height: 100%;
-    border: 4px solid transparent;
     border-radius: 0;
+    border: 4px solid transparent;
+    font-size: 16px;
+    height: 100%;
     outline: none;
+    padding: 20px;
     resize: none;
+    width: 100%;
   }
   textarea:focus {
     border-color: lightskyblue;
   }
 </style>
 
-<textarea placeholder="Put sources here"/>
+<textarea bind:value={$sourceQuery} placeholder="Put sources here"/>
 

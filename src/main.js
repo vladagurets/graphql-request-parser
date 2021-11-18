@@ -1,8 +1,5 @@
-import App from './App.svelte';
+import App from './App.svelte'
 
 new App({
-  target: document.getElementById('app'),
-  props: {
-    name: 'world'
-  }
-});
+  target: document.getElementById('app')
+})

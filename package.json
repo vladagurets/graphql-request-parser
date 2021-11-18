@@ -17,5 +17,8 @@
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
     "svelte": "^3.44.1"
+  },
+  "dependencies": {
+    "graphql": "^16.0.1"
   }
 }
