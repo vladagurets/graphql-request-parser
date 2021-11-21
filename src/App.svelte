@@ -5,8 +5,10 @@
 
   // TODO:
   // 1. Add popup with manual
-  // 3. Configure CI/CD
-  // 4. Show code / variables label rotated on 90 deg
+  // 2. Configure CI/CD
+  // 3. Show code / variables label rotated on 90 deg
+  // 4. Syntax highlight
+  // 5. Parse input params (move each on next line)
 </script>
 
 <div class="header">
