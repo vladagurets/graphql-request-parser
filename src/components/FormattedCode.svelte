@@ -16,9 +16,14 @@
         const normalizedString = value.replace(/(\r\n|\n|\r)/gm, "")
         const parsedString = JSON.parse(normalizedString)
 
+        const isVariablesExists = !!Object.keys(parsedString.variables).length
 
         code = print(parse(parsedString.query))
-        variables = JSON.stringify(parsedString.variables, null, 2)
+        if (isVariablesExists) {
+          variables = JSON.stringify(parsedString.variables, null, 2)
+        } else {
+          variables = null
+        }
       } catch (e) {
         console.log(e)
         error = 'Can\'t parce input :('
