@@ -21,7 +21,6 @@
   h1 {
     font-size: 1.5em;
     font-weight: 600;
-    opacity: .8;
     user-select: none;
   }
 
