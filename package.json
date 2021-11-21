@@ -4,7 +4,20 @@
   "main": "src/index.html",
   "description": "GraphQL query parcer. Make your client's request readable",
   "author": "Vladyslav Ohirenko <aguretsvlad@gmail.com",
+  "homepage": "https://vladagurets.github.io/graphql-request-parcer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladagurets/graphql-request-parcer"
+  },
   "license": "MIT",
+  "keywords": [
+    "graphql",
+    "query",
+    "parcer",
+    "request",
+    "sources",
+    "operation name"
+  ],
   "scripts": {
     "start": "parcel -p 3000 src/index.html",
     "build": "parcel build src/index.html"
