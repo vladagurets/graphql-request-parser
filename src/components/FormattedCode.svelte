@@ -13,11 +13,14 @@
   const debouncedUpdate = debounce(value => {
     if (value) {
       try {
-        const parsedString = JSON.parse(value.replaceAll('\n', ''))
+        const normalizedString = value.replace(/(\r\n|\n|\r)/gm, "")
+        const parsedString = JSON.parse(normalizedString)
+
 
         code = print(parse(parsedString.query))
         variables = JSON.stringify(parsedString.variables, null, 2)
       } catch (e) {
+        console.log(e)
         error = 'Can\'t parce input :('
       } finally {
         isLoading = false
