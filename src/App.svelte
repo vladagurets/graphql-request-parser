@@ -10,9 +10,6 @@
   // 4. Show code / variables label rotated on 90 deg
 </script>
 
-<style>
-</style>
-
 <div class="header">
   <Header/>
 </div>
