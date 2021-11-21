@@ -64,10 +64,6 @@
     border-top: 2px dashed var(--main-border-color);
   }
 
-  .rightText {
-
-  }
-
   .code, .variables {
     padding: 20px;
   }
