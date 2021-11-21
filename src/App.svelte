@@ -1,7 +1,7 @@
 <script>
  	import Header from './components/Header.svelte';
   import SourceInput from './components/SourceInput.svelte';
-  import FormattedInput from './components/FormattedInput.svelte';
+  import FormattedCode from './components/FormattedCode.svelte';
 
   // TODO:
   // 1. Add popup with manual
@@ -20,5 +20,5 @@
   <SourceInput/>
 </div>
 <div class="content-formatted">
-  <FormattedInput />
+  <FormattedCode />
 </div>

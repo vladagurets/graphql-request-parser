@@ -55,10 +55,11 @@
     display: flex;
     flex-direction: column;
   }
+
   .variables {
     min-height: 200px;
     overflow-y: auto;
-    border-top: 1px solid var(--main-border-color);
+    border-top: 2px dashed var(--main-border-color);
   }
 
   .code, .variables {
