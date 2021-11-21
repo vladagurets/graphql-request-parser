@@ -19,8 +19,9 @@
     "operation name"
   ],
   "scripts": {
-    "start": "parcel -p 3000 src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel -p 3000 src/index.html --open",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -29,6 +30,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-svelte3": "^3.2.1",
+    "gh-pages": "^3.2.3",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
     "svelte": "^3.44.1"
