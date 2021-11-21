@@ -39,12 +39,10 @@
     overflow-y: auto;
     white-space: pre-wrap;
     line-height: 1.5;
-    opacity: .8;
   }
 
   span {
     font-size: 20px;
-    opacity: .7;
   }
 
   .content, .message {
@@ -57,9 +55,14 @@
   }
 
   .variables {
+    position: relative;
     min-height: 200px;
     overflow-y: auto;
     border-top: 2px dashed var(--main-border-color);
+  }
+
+  .rightText {
+
   }
 
   .code, .variables {

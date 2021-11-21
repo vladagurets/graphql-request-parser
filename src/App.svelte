@@ -5,7 +5,6 @@
 
   // TODO:
   // 1. Add popup with manual
-  // 2. Add theme switcher
   // 3. Configure CI/CD
   // 4. Show code / variables label rotated on 90 deg
 </script>

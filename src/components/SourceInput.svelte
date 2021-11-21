@@ -12,6 +12,7 @@
     padding: 20px;
     resize: none;
     width: 100%;
+    opacity: .7;
   }
   textarea:focus {
     border-color: var(--outline-focus-color);

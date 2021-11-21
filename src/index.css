@@ -9,10 +9,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 body[theme=dark] {
-  --main-font-color: whitesmoke;
-  --main-bg-color: black;
-  --main-border-color: whitesmoke;
-  --outline-focus-color: cornflowerblue;
+  --main-font-color: #e6dfdf;
+  --main-bg-color: #001523;
+  --main-border-color: #8b8989;
+  --outline-focus-color: #2a59ad;
 }
 
 * {
