@@ -31,7 +31,7 @@
 </style>
 
 <header>
-  <h1>/GraphQL query parcer/</h1>
+  <h1>/GraphQL request parcer/</h1>
   <div class='right'>
     <ThemeSwitch onChange={onChange}/>
     <GithubIcon />
