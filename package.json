@@ -1,19 +1,19 @@
 {
-  "name": "graphql-request-parcer",
+  "name": "graphql-request-parser",
   "version": "1.0.0",
   "main": "src/index.html",
-  "description": "GraphQL request parcer. Make your client's request query readable",
+  "description": "GraphQL request parser. Make your client's request query readable",
   "author": "Vladyslav Ohirenko <aguretsvlad@gmail.com",
-  "homepage": "https://vladagurets.github.io/graphql-request-parcer/",
+  "homepage": "https://vladagurets.github.io/graphql-request-parser/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vladagurets/graphql-request-parcer/"
+    "url": "https://github.com/vladagurets/graphql-request-parser/"
   },
   "license": "MIT",
   "keywords": [
     "graphql",
     "query",
-    "parcer",
+    "parser",
     "request",
     "sources",
     "operation name"
