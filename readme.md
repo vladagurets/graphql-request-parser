@@ -7,4 +7,4 @@ Manual:
 2. Paste to GraphQL request parcer
 
 
-![Kiku](public/manual_img.gif)
+![Manual](public/manual_img.gif)
