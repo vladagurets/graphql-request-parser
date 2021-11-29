@@ -1,6 +1,7 @@
 <script>
    import GithubIcon from './GithubIcon.svelte';
    import ThemeSwitch from './ThemeSwitch.svelte';
+   import QuestionMarkIcon from './QuestionMarkIcon.svelte';
 
   function onChange (params) {
     console.log(params)
@@ -28,12 +29,20 @@
     display: flex;
     align-items: center;
   }
+
+  a {
+    margin-right: 10px;
+    text-decoration: none;
+  }
 </style>
 
 <header>
   <h1>/GraphQL request parser/</h1>
   <div class='right'>
     <ThemeSwitch onChange={onChange}/>
+    <a href='https://github.com/vladagurets/graphql-request-parser/blob/master/readme.md'>
+      <QuestionMarkIcon />
+    </a>
     <GithubIcon />
   </div>
 </header>
